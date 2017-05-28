@@ -1,0 +1,52 @@
+{
+    "event": [
+        {"q": "change color", "a": "color"},
+        {"q": "makecolor", "a": "color"},
+        {"q": "fill color", "a": "color"},
+        {"q": "put color", "a": "color"},
+        {"q": "color", "a": "color"},
+        {"q": "change text", "a": "text"},
+        {"q": "make text", "a": "text"},
+        {"q": "fill text", "a": "text"},
+        {"q": "put text", "a": "text"},
+        {"q": "text", "a": "text"},
+        {"q": "write", "a": "text"}
+    ],
+    "target": [
+        {"q": "box one", "a": "1"},
+        {"q": "box 1", "a": "1"},
+        {"q": "first box", "a": "1"},
+        {"q": "first one", "a": "1"},
+
+        {"q": "box two", "a": "2"},
+        {"q": "box 2", "a": "2"},
+        {"q": "box to", "a": "2"},
+        {"q": "box two", "a": "2"},
+        {"q": "second box", "a": "2"},
+        {"q": "second one", "a": "2"},
+        {"q": "seacond box", "a": "2"},
+        {"q": "seacond one", "a": "2"},
+
+        {"q": "box 3", "a": "3"},
+        {"q": "box three", "a": "3"},
+        {"q": "third one", "a": "3"},
+        {"q": "third box", "a": "3"},
+        {"q": "third block", "a": "3"},
+
+        {"q": "box 4", "a": "4"},
+        {"q": "box four", "a": "4"},
+        {"q": "fourth second", "a": "4"},
+        {"q": "box for", "a": "4"},
+        {"q": "forth second", "a": "4"},
+        {"q": "fourth one", "a": "4"}
+    ],
+    "color": [
+        {"q": "cherry red", "a": "#bb0000"},
+        {"q": "lime green", "a": "00bb00"},
+        {"q": "sky blue", "a": "0000bb"},
+        {"q": "dark black", "a": ""},
+        {"q": "white", "a": "ffffff"},
+        {"q": "yellow", "a": "yellow"},
+        {"q": "orange", "a": "orange"}
+    ]
+}

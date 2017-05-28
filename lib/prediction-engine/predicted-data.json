@@ -1,0 +1,39 @@
+[
+    {
+        "dayframe": "morning",
+        "colorMatrix": [
+            {
+                "color": "#009933",
+                "probability": 0.7
+            },{
+                "color": "#003399",
+                "probability": 0.2
+            }
+        ]
+    },{
+        "dayframe": "afternoon",
+        "colorMatrix": [
+            {
+                "color": "#ffffff",
+                "probability": 0.6
+            },{
+                "color": "#ebebeb",
+                "probability": 0.4
+            }
+        ]
+    },{
+        "dayframe": "evening",
+        "colorMatrix": [
+            {
+                "color": "#882211",
+                "probability": 0.2
+            },{
+                "color": "#9911aa",
+                "probability": 0.8
+            }
+        ]
+    },{
+        "dayframe": "night",
+        "colorMatrix": []
+    }
+]
