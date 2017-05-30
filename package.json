@@ -1,0 +1,19 @@
+{
+  "name": "prediction-model",
+  "version": "1.0.0",
+  "description": "Predicts the future light color",
+  "dependencies": {
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "express": "^4.7.2",
+    "fast-url-parser": "^1.1.3",
+    "lodash": "*",
+    "natural": "*",
+    "natural-brain": "*",
+    "path": "*",
+    "request": "*"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
