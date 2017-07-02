@@ -1,0 +1,21 @@
+<html ng-app="piccolo">
+    <head>
+        <title>Hey Piccolo</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body ng-controller="mainController as ctrl">
+        <h2>Hi This is Piccolo</h2>
+        <h3 ng-bind="ctrl.error"></h3>
+        <h3 ng-bind="ctrl.command"></h3>
+        <h3 ng-bind="ctrl.result"></h3>
+        <div class="row">
+            
+            <div class="col-md-6">
+                <div class="bulb" id="bulb"></div>
+            </div>
+        </div>
+        <script src="./js/angular.min.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

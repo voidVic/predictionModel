@@ -10,7 +10,18 @@
         {"q": "fill text", "a": "text"},
         {"q": "put text", "a": "text"},
         {"q": "text", "a": "text"},
-        {"q": "write", "a": "text"}
+        {"q": "write", "a": "text"},
+        {"q": "too bright", "a": "dim"},
+        {"q": "very bright", "a": "dim"},
+        {"q": "dim", "a": "dim"},
+        {"q": "is high", "a": "dim"},
+        {"q": "is low", "a": "high"},
+        {"q": "too low", "a": "high"},
+        {"q": "dark", "a": "high"},
+        {"q": "turn on", "a": "on"},
+        {"q": "turn off", "a": "off"},
+        {"q": "switch on", "a": "on"},
+        {"q": "switch off", "a": "off"}
     ],
     "target": [
         {"q": "box one", "a": "1"},
