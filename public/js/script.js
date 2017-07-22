@@ -17,7 +17,8 @@ app.factory('appService', ['$http', function ($http) {
         $http({
             url: "classify/text",
             method: "POST",
-            data: text
+            data: {'what': text},
+            json: true
         })
             .then(function (data) {
                 console.log(data);
