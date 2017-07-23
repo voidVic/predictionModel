@@ -17,7 +17,7 @@ app.factory('appService', ['$http', function ($http) {
         $http({
             url: "classify/text",
             method: "POST",
-            data: {'what': text},
+            data: { 'what': text },
             json: true
         })
             .then(function (data) {
@@ -42,23 +42,29 @@ app.controller('mainController', ['appService', function (appService) {
         initSpeechLong();
         initSpeechShort();
         recognition.start();
-        recognition.onresult = function(event){
-             var speech = event.results[event.resultIndex][0].transcript;
-            if(haveWakeWord(speech)){
+        recognition.onresult = function (event) {
+            var speech = event.results[event.resultIndex][0].transcript;
+            if (haveWakeWord(speech)) {
+                freshCommand = false;
+                console.log("starting short");
+                ctrl.command = "";
+                ctrl.error = "";
+                ctrl.result = "";
+                recognitionShort.start();
             }
-            freshCommand = false;
-            console.log("starting short");
-            recognitionShort.start();
         }
         recognitionShort.onresult = function (event) {
             //console.log(event);
             var speech = event.results[event.resultIndex][0].transcript;
             console.log(speech);
-            appService.sendCommand(speech, function(data){
-                        console.log(data);
-                    }, function(err){
-                        console.log(err);
-                    })
+            ctrl.command = speech;
+            appService.sendCommand(speech, function (data) {
+                console.log(data);
+                ctrl.result = data.data;
+            }, function (err) {
+                ctrl.error = err;
+                console.log(err);
+            })
             // if(haveWakeWord(speech)){
             //     if(lastCommand == speech){
             //         ctrl.command = speech;
@@ -72,13 +78,13 @@ app.controller('mainController', ['appService', function (appService) {
             // }
         };
         recognition.onend = function () {
-            if(freshCommand){
+            if (freshCommand) {
                 console.log("restarted");
                 lastCommand = "";
                 recognition.start();
             }
         };
-        recognitionShort.onend = function(){
+        recognitionShort.onend = function () {
             freshCommand = true;
             console.log("starting long again");
             recognition.start();
@@ -117,10 +123,10 @@ app.controller('mainController', ['appService', function (appService) {
 
         }
     }
-    
-    var haveWakeWord = function(text){
+
+    var haveWakeWord = function (text) {
         return true;
-        if(text.indexOf('piccolo') >= 0){
+        if (text.indexOf('vegeta') >= 0) {
             return true;
         }
         return false;

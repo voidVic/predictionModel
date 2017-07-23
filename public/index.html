@@ -5,10 +5,13 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body ng-controller="mainController as ctrl">
-        <h2>Hi This is Piccolo</h2>
-        <h3 ng-bind="ctrl.error"></h3>
-        <h3 ng-bind="ctrl.command"></h3>
-        <h3 ng-bind="ctrl.result"></h3>
+        <h1>Hi I am Vegeta</h1>
+        <h2>Call my name and say something like..</h2>
+        <h2>"Hey Vegeta! turn Kitchen Bulb Green"</h2>
+        <h2>And I will try to assist you.</h2>
+        <h3><span>Error:  </span><span ng-bind="ctrl.error"></h3>
+        <h3><span>Command:  </span><span ng-bind="ctrl.command"></h3>
+        <h1><span>Result:  </span><span ng-bind="ctrl.result"></h1>
         <div class="row">
             
             <div class="col-md-6">
