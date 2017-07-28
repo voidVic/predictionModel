@@ -25,6 +25,21 @@
         {"q": "switch on", "a": "on"},
         {"q": "switch off", "a": "off"}
     ],
+    "conditional": [
+        {"q":["if", "then"], "a": "c"},
+        {"q":["if", "do"], "a": "c"},
+        {"q":["do", "if"], "a": "c"},
+        {"q":["always", "if"], "a": "r"},
+        {"q":["always", "when"], "a": "r"},
+        {"q":["when", "then"], "a": "r"},
+        {"q":["when", "do"], "a": "r"},
+        {"q":["do", "when"], "a": "r"},
+        {"q":["when", "do"], "a": "r"},
+        {"q":["whenever", "then"], "a": "r"},
+        {"q":["whenever", "do"], "a": "r"},
+        {"q":["do", "whenever"], "a": "r"},
+        {"q":["whenever", "do"], "a": "r"}
+    ],
     "target": [
         {"q": "box one", "a": "1"},
         {"q": "box 1", "a": "1"},

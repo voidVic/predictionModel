@@ -125,8 +125,7 @@ app.controller('mainController', ['appService', function (appService) {
     }
 
     var haveWakeWord = function (text) {
-        return true;
-        if (text.indexOf('vegeta') >= 0) {
+        if(text.toLowerCase().indexOf('vegeta') >= 0) {
             return true;
         }
         return false;
