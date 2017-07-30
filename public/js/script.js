@@ -61,21 +61,11 @@ app.controller('mainController', ['appService', function (appService) {
             appService.sendCommand(speech, function (data) {
                 console.log(data);
                 ctrl.result = data.data;
+                speak(data.data);
             }, function (err) {
                 ctrl.error = err;
                 console.log(err);
-            })
-            // if(haveWakeWord(speech)){
-            //     if(lastCommand == speech){
-            //         ctrl.command = speech;
-            //         appService.sendCommand(speech, function(data){
-            //             console.log(data);
-            //         }, function(err){
-            //             console.log(err);
-            //         })
-            //     }
-            //     lastCommand = speech;
-            // }
+            });
         };
         recognition.onend = function () {
             if (freshCommand) {
@@ -89,6 +79,7 @@ app.controller('mainController', ['appService', function (appService) {
             console.log("starting long again");
             recognition.start();
         }
+
     }
     var recognition, recognitionShort;
     var actionSpeech = "";
@@ -129,6 +120,12 @@ app.controller('mainController', ['appService', function (appService) {
             return true;
         }
         return false;
+    }
+
+    var speak = function(msg){
+        msg = new SpeechSynthesisUtterance(msg);
+        msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Microsoft Zira Desktop - English (United States)'; })[0];
+        speechSynthesis.speak(msg);
     }
 
 

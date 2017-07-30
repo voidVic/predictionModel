@@ -26,19 +26,19 @@
         {"q": "switch off", "a": "off"}
     ],
     "conditional": [
-        {"q":["if", "then"], "a": "c"},
-        {"q":["if", "do"], "a": "c"},
-        {"q":["do", "if"], "a": "c"},
-        {"q":["always", "if"], "a": "r"},
-        {"q":["always", "when"], "a": "r"},
-        {"q":["when", "then"], "a": "r"},
-        {"q":["when", "do"], "a": "r"},
-        {"q":["do", "when"], "a": "r"},
-        {"q":["when", "do"], "a": "r"},
-        {"q":["whenever", "then"], "a": "r"},
-        {"q":["whenever", "do"], "a": "r"},
-        {"q":["do", "whenever"], "a": "r"},
-        {"q":["whenever", "do"], "a": "r"}
+        {"q":["if", "then"], "a": ["c","1", "if", "then"]},
+        {"q":["if", "do"], "a": ["c","1", "if", "do"]},
+        {"q":["do", "if"], "a": ["c","2", "do", "if"]},
+        {"q":["always", "if"], "a": ["r","1", "always", "if"]},
+        {"q":["always", "when"], "a": ["r","1", "always", "when"]},
+        {"q":["when", "then"], "a": ["r","2", "when", "then"]},
+        {"q":["when", "do"], "a": ["r","2", "when", "do"]},
+        {"q":["do", "when"], "a": ["r","1", "do", "when"]},
+        {"q":["when", "do"], "a": ["r","1", "when", "do"]},
+        {"q":["whenever", "then"], "a": ["r","1", "whenever", "then"]},
+        {"q":["whenever", "do"], "a": ["r","1", "whenever", "do"]},
+        {"q":["do", "whenever"], "a": ["r","2", "do", "whenever"]},
+        {"q":["whenever", "do"], "a": ["r","1", "whenever", "do"]}
     ],
     "target": [
         {"q": "box one", "a": "1"},
